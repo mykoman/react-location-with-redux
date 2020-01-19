@@ -6,6 +6,7 @@ import BehaviouralReducer from '../Reducers/BehaviourQuestion';
 import TabPosition from '../Reducers/TabPosition';
 import Interested from '../Reducers/Interested';
 import BtnActivator from '../Reducers/BtnActivator';
+import LocationReducer from '../Reducers/LocationReducer';
 
 
 
@@ -16,13 +17,8 @@ import BtnActivator from '../Reducers/BtnActivator';
 
 export default ()=>{
     const store = createStore(
-        combineReducers({personalQuestion: PersonalReducer, 
-            technicalQuestion: TechnicalReducer, 
-            availabilityQuestion: AvailabilityReducer,
-            behaviouralQuestion: BehaviouralReducer,
-            tabPosition: TabPosition,
-            interest: Interested,
-            btnActivator: BtnActivator
+        combineReducers({
+            locationDetails:LocationReducer
         })
         );
         return store
